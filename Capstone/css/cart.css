@@ -16,71 +16,7 @@
   text-align: center;
   font-weight: 20px;
 }
-.modal {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80%;
-  max-width: 50%; /* 모달 크기 조절 */
-  height: 60%;
-  background-color: rgba(255, 255, 255, 0.9);
-  z-index: 999;
-  text-align: center;
-  padding: 1%;
-}
 
-/* 모달 내용 래퍼 스타일 */
-.modal-content {
-  display: flex; /* 내용을 가로로 나란히 배치 */
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  background-color: #fff;
-  justify-content: space-between; /* 내용 간격을 오른쪽으로 분배 */
-}
-
-/* 모달 닫기 버튼 스타일 */
-.close-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-  width: 20px; /* 원하는 너비로 조절 */
-  height: 20px; /* 원하는 높이로 조절 */
-}
-
-/* 모달 설명 스타일 */
-.modal-description {
-  text-align: right;
-  margin-bottom: 10px;
-}
-
-/* "추가" 버튼 스타일 */
-#addButton {
-  background-color: #75abd2;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  margin-top: 10px; /* 위쪽 여백 추가 */
-}
-
-#addButton:hover {
-  background-color: #75abd2;
-}
-
-.menu-button {
-  cursor: pointer;
-}
-
-.menu_name {
-  font-size: 15px;
-  text-align: center;
-  font-weight: 20px;
-}
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -811,34 +747,8 @@ progress {
   width: auto;
 }
 
-.row-cols-1 > * {
-  flex: 0 0 auto;
-  width: 100%;
-}
-
-.row-cols-2 > * {
-  flex: 0 0 auto;
-  width: 50%;
-}
-
-.row-cols-3 > * {
-  flex: 0 0 auto;
-  width: 33.3333333333%;
-}
-
-.row-cols-4 > * {
-  flex: 0 0 auto;
-  width: 25%;
-}
-
-.row-cols-5 > * {
-  flex: 0 0 auto;
-  width: 20%;
-}
-
-.row-cols-6 > * {
-  flex: 0 0 auto;
-  width: 16.6666666667%;
+.row-cols-2, .row-cols-md-3, .row-cols-xl-4 {
+    gap: 0;
 }
 
 .col-auto {
@@ -11228,9 +11138,8 @@ list-group-item .bg-dark {
 }
 
 #sidebar-wrapper {
-  min-height: 100vh;
-  margin-left: -15rem;
-  transition: margin 0.25s ease-out;
+    padding: 0;
+    margin: 0;
 }
 
 #sidebar-wrapper .sidebar-heading {
@@ -11265,8 +11174,81 @@ body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
 
 /* 추가 */
 
-/* ordermodal = modal-1 로 지정해둠 */
-.modal-1 {
+/* menumodal = modal 로 지정해둠 */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 50%; /* 모달 크기 조절 */
+    height: 60%;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 999;
+    text-align: center;
+    padding: 1%;
+  }
+  
+  /* 모달 내용 래퍼 스타일 */
+  .modal-content {
+    display: flex; /* 내용을 가로로 나란히 배치 */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-color: #fff;
+    justify-content: space-between; /* 내용 간격을 오른쪽으로 분배 */
+  }
+  
+  /* 모달 닫기 버튼 스타일 */
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    width: 20px; /* 원하는 너비로 조절 */
+    height: 20px; /* 원하는 높이로 조절 */
+  }
+  
+  
+  /* 모달 설명 스타일 */
+  .modal-description {
+    text-align: right;
+    margin-bottom: 10px;
+  }
+  
+  /* "추가" 버튼 스타일 */
+  #addOrderButton {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px; /* 버튼의 여백 설정 */
+    background-color: #000; /* 배경색 지정 */
+    color: #fff; /* 텍스트 색상 지정 */
+    border: none; /* 테두리 없앰 */
+    border-radius: 5px; /* 모서리를 둥글게 만듦 */
+    cursor: pointer; /* 커서를 포인터로 변경하여 클릭 가능한 상태로 표시 */
+}
+
+#addOrderButton:hover {
+    background-color: #333; /* 마우스 호버 시 배경색 변경 */
+}
+  
+  .menu-button {
+    cursor: pointer;
+  }
+  
+  .menu_name {
+    font-size: 15px;
+    text-align: center;
+    font-weight: 20px;
+  }
+
+
+/* ordermodal = modal-order 로 지정해둠 */
+.modal-order {
   display: none;
   position: fixed;
   top: 50%;
@@ -11282,7 +11264,7 @@ body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
 }
 
 /* 모달 내용 래퍼 스타일 */
-.modal-1-content {
+.modal-order-content {
   display: flex; /* 내용을 가로로 나란히 배치 */
   flex-direction: column;
   align-items: center;
@@ -11300,3 +11282,30 @@ body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
 }
 
 
+/* basketModal = class = modal-basket 으로 지정해둠 */
+
+.modal-basket {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 300px; /* 모달의 폭 조절 */
+    background-color: #fff;
+    z-index: 999;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.modal-basket-content {
+    max-height: 100vh; /* 최대 화면 높이까지만 확장 */
+    overflow-y: auto; /* 넘치면 스크롤 허용 */
+}
+
+/* 하단 여백 없애기 주문하기,장바구니 버튼*/
+
+.flex-end-footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin: 0;
+}

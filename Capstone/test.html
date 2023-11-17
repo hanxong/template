@@ -12,7 +12,7 @@
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/Main.css" rel="stylesheet" />
+    <link href="css/cart.css" rel="stylesheet" />
     <div id="userList"></div>
   </head>
   <body>
@@ -139,7 +139,7 @@
                     <div class="card-body p-4">
                       <div class="text-name">
                         <button class="menu-button">
-                          <img class="card-img-top" src="0.jpeg" alt="..." />
+                          <img class="card-img-top" src="./assets/img/한송이.jpg" alt="..." />
                         </button>
 
                         <!-- Product name-->
@@ -159,7 +159,7 @@
                     <div class="card-body p-4">
                       <div class="text-name">
                         <button class="menu-button">
-                          <img class="card-img-top" src="0.jpeg" alt="..." />
+                          <img class="card-img-top" src="./assets/img/한송이.jpg" alt="..." />
                         </button>
 
                         <!-- Product name-->
@@ -179,7 +179,7 @@
                     <div class="card-body p-4">
                       <div class="text-name">
                         <button class="menu-button">
-                          <img class="card-img-top" src="0.jpeg" alt="..." />
+                          <img class="card-img-top" src="./assets/img/한송이.jpg" alt="..." />
                         </button>
 
                         <!-- Product name-->
@@ -200,7 +200,7 @@
                     <div class="card-body p-4">
                       <div class="text-name">
                         <button class="menu-button">
-                          <img class="card-img-top" src="0.jpeg" alt="..." />
+                          <img class="card-img-top" src="./assets/img/한송이.jpg" alt="..." />
                         </button>
 
                         <!-- Product name-->
@@ -224,7 +224,7 @@
                     <div class="card-body p-4">
                       <div class="text-name">
                         <button class="menu-button">
-                          <img class="card-img-top" src="0.jpeg" alt="..." />
+                          <img class="card-img-top" src="./assets/img/한송이.jpg" alt="..." />
                         </button>
 
                         <!-- Product name-->
@@ -250,7 +250,7 @@
                     <div class="card-body p-4">
                       <div class="text-name">
                         <button class="menu-button">
-                          <img class="card-img-top" src="0.jpeg" alt="..." />
+                          <img class="card-img-top" src="./assets/img/한송이.jpg" alt="..." />
                         </button>
 
                         <!-- Product name-->
@@ -274,7 +274,7 @@
                     <div class="card-body p-4">
                       <div class="text-name">
                         <button class="menu-button">
-                          <img class="card-img-top" src="0.jpeg" alt="..." />
+                          <img class="card-img-top" src="./assets/img/한송이.jpg" alt="..." />
                         </button>
 
                         <p class="fw-bolder"></p>
@@ -295,27 +295,50 @@
         </div>
       </div>
     </div>
-    <footer class="py-5 bg-light">
-      <form class="d-flex justify-content-end">
-        <button class="btn btn-outline-dark" type="submit">주문내역</button>
-        <button class="btn btn-outline-dark" type="submit">장바구니</button>
-      </form>
+    <footer class="bg-light flex-start-footer">
+        <form class="d-flex justify-content-end">
+            <!-- 주문하기 버튼 -->
+            <button class="btn btn-outline-dark" id="orderButton" type="submit">주문내역</button>
+            <!-- 장바구니 버튼 -->
+            <button class="btn btn-outline-dark" id="basketButton" type="button">장바구니</button>
+        </form>
     </footer>
-    <!-- Modal -->
+
+    <!-- menuModal -->
     <div id="menuModal" class="modal">
       <div id="modalContent" class="modal-content">
         <span id="close-Button" class="close-button">X</span>
-        <button id="addButton">추가</button>
+        <button id="menuaddButton">추가</button>
         <div class="modal-description"></div>
       </div>
     </div>
 
-    <!-- Core theme JS-->
-    <!-- Core theme JS-->
-    <script src="js/test.js"></script>
+    <!-- orderModal -->
+    <div id="orderModal" class="modal-order">
+        <div id="orderModalContent" class="modal-order-content">
+            <span id="closeOrderButton" class="close-button">X</span>
+            <button id="addOrderButton">완료</button>
+            <div class="modal-1-description"></div>
+        </div>
+    </div>
+
+    <!-- basketModal -->
+    <div id="basketModal" class="modal-basket">
+        <div id="basketModalContent" class="modal-basket-content">
+            <span id="closeBasketButton" class="close-button">X</span>
+            <button id="addOrderButton">주문하기</button>
+            <div class="basket-description"></div>
+        </div>
+    </div>
+
+
     
-    <!-- Bootstrap core JS-->
+    <script src="js/basket.js"></script>
+    <script src="js/order.js"></script>
+    <script src="js/menuModal.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/modal.js"></script>
+    
+    
   </body>
+  
 </html>
