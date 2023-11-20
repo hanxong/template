@@ -13,15 +13,9 @@
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/cart.css" rel="stylesheet" />
-    <link href="css/basket.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    
     <div id="userList"></div>
     
-     <!-- <script type="text/javascript" src="js/menuModal.js" defer></script>  -->
-     <script type="text/javascript" src="js/basket.js" defer></script>
-     <!-- <script type="text/javascript" src="js/order.js" defer></script> -->
-   
+    <script type="text/javascript" src="js/menuModal.js" defer></script>
   </head>
   <body>
     
@@ -132,7 +126,7 @@
                         <!-- Product name-->
                         <p class="fw-bolder"></p>
                         <!-- Product price-->
-                        <p class="fw-price"></p>
+                       
                         <input type="hidden" class="fw-description"></input>
                       </div>
                     </div>
@@ -153,7 +147,7 @@
                         <!-- Product name-->
                         <p class="fw-bolder"></p>
                         <!-- Product price-->
-                        <p class="fw-price"></p>
+                        
                         <input type="hidden" class="fw-description"></input>
                       </div>
                     </div>
@@ -173,7 +167,7 @@
                         <!-- Product name-->
                         <p class="fw-bolder"></p>
                         <!-- Product price-->
-                        <p class="fw-price"></p>
+                        
                         <input type="hidden" class="fw-description"></input>
                       </div>
 
@@ -193,7 +187,7 @@
                         <!-- Product name-->
                         <p class="fw-bolder"></p>
                         <!-- Product price-->
-                        <p class="fw-price"></p>
+                        
                         <input type="hidden" class="fw-description"></input>
                       </div>
 
@@ -214,7 +208,7 @@
                         <!-- Product name-->
                         <p class="fw-bolder"></p>
                         <!-- Product price-->
-                        <p class="fw-price"></p>
+                       
                         <input type="hidden" class="fw-description"></input>
                       </div>
 
@@ -238,7 +232,7 @@
                         <!-- Product name-->
                         <p class="fw-bolder"></p>
                         <!-- Product price-->
-                        <p class="fw-price"></p>
+                        
                         <input type="hidden" class="fw-description"></input>
                       </div>
 
@@ -264,7 +258,7 @@
                         <!-- Product name-->
                         <p class="fw-bolder"></p>
                         <!-- Product price-->
-                        <p class="fw-price"></p>
+                        
                         <input type="hidden" class="fw-description"></input>
                       </div>
 
@@ -287,7 +281,7 @@
 
                         <p class="fw-bolder"></p>
                         <!-- Product price-->
-                        <p class="fw-price"></p>
+                       
                         <input type="hidden" class="fw-description"></input>
                       </div>
                     </div>
@@ -304,48 +298,21 @@
       </div>
     </div>
     <footer class="bg-light flex-start-footer">
-        <form   class="d-flex justify-content-end">
+        <form class="d-flex justify-content-end">
             <!-- 주문하기 버튼 -->
-            <div><button class="btn btn-outline-dark" id="orderButton" type="submit">주문내역</button></div>
-            
-            <!-- 장바구니 -->
-            <div >
-              <button class="btn btn-outline-dark" id="basketButton" type="button">장바구니</button>
-               <div id="basketModal" class="modal-basket">
-                <h2 class="basket-title">장바구니 내역</h2>
-                   <span id="closeBasketButton" class="close-button">X</span>
-                   <!-- content -->
-                <div id="basketModalContent" class="modal-basket-content">
-                  
-                   <!-- 합계 금액 -->
-                   <div class="total">
-                    <div class="total-title">total</div>
-                    <div class="total-price">원</div>
-                   </div>
-                    
-                  <!--  -->
-                  <button class="btn-buy" id="addOrderButton">주문하기</button>
-                   <div class="basket-description"></div>
-                 
-                </div>
-            </div>
-            
-
-         
-            
+            <button class="btn btn-outline-dark" id="orderButton" type="submit">주문내역</button>
+            <!-- 장바구니 버튼 -->
+            <button class="btn btn-outline-dark" id="basketButton" type="button">장바구니</button>
         </form>
     </footer>
-
-<!-- basketModal -->
 
    
 
     <!-- menuModal -->
-    
     <div id="menuModal" class="modal">
       <div id="modalContent" class="modal-content">
-        <span id="closeButton" class="close-button">X</span>
-       <!-- <button id="addButton" onclick="goBasket()">추가</button>-->
+        <span id="close-Button" class="close-button">X</span>
+        <button id="menuaddButton">추가</button>
         <div class="modal-description"></div>
       </div>
     </div>
@@ -360,9 +327,13 @@
     </div>
 
     <!-- basketModal -->
-    
-
-    
+    <div id="basketModal" class="modal-basket">
+        <div id="basketModalContent" class="modal-basket-content">
+            <span id="closeBasketButton" class="close-button">X</span>
+            <button id="addOrderButton">주문하기</button>
+            <div class="basket-description"></div>
+        </div>
+    </div>
 
     
 

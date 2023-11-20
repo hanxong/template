@@ -12,10 +12,14 @@
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/Main.css" rel="stylesheet" />
+    <link href="css/cart.css" rel="stylesheet" />
     <div id="userList"></div>
+    
+    <script type="text/javascript" src="js/menuModal.js" defer></script>
+   
   </head>
   <body>
+    
     <div id="userList"></div>
     <div class="d-flex" id="wrapper">
       <!-- Sidebar-->
@@ -24,37 +28,37 @@
         <div class="list-group list-group-flush">
           <a
             class="list-group-item list-group-item-action list-group-item-light p-3"
-            href="#!"
+            href="Best_menu.html"
             >베스트 메뉴</a
           >
           <a
             class="list-group-item list-group-item-action list-group-item-light p-3"
-            href="#!"
+            href="test.html"
             >메인 메뉴</a
           >
           <a
             class="list-group-item list-group-item-action list-group-item-light p-3"
-            href="#!"
+            href="Special_menu.html"
             >특선 메뉴</a
           >
           <a
             class="list-group-item list-group-item-action list-group-item-light p-3"
-            href="#!"
+            href="Side_menu.html"
             >사이드 메뉴</a
           >
           <a
             class="list-group-item list-group-item-action list-group-item-light p-3"
-            href="#!"
+            href="Drink.html"
             >음료</a
           >
           <a
             class="list-group-item list-group-item-action list-group-item-light p-3"
-            href="#!"
+            href="Alcoholic_drink.html"
             >주류</a
           >
           <a
             class="list-group-item list-group-item-action list-group-item-light p-3"
-            href="#!"
+            href="Call.html"
             >직원호출</a
           >
         </div>
@@ -95,8 +99,7 @@
                     class="dropdown-menu dropdown-menu-end"
                     aria-labelledby="navbarDropdown"
                   >
-                    <a class="dropdown-item" href="#!">로그인</a>
-                    <a class="dropdown-item" href="#!">회원가입</a>
+                  <a class="dropdown-item" href="signup.html"> 번호 입력</a>
                   </div>
                 </li>
               </ul>
@@ -139,7 +142,7 @@
                     <div class="card-body p-4">
                       <div class="text-name">
                         <button class="menu-button">
-                          <img class="card-img-top" src="0.jpeg" alt="..." />
+                          <img class="card-img-top" src="./assets/img/한송이.jpg" alt="..." />
                         </button>
 
                         <!-- Product name-->
@@ -159,7 +162,7 @@
                     <div class="card-body p-4">
                       <div class="text-name">
                         <button class="menu-button">
-                          <img class="card-img-top" src="/assets/img/KakaoTalk_20231115_192105091.jpg" alt="..." />
+                          <img class="card-img-top" src="./assets/img/한송이.jpg" alt="..." />
                         </button>
 
                         <!-- Product name-->
@@ -179,7 +182,7 @@
                     <div class="card-body p-4">
                       <div class="text-name">
                         <button class="menu-button">
-                          <img class="card-img-top" src="0.jpeg" alt="..." />
+                          <img class="card-img-top" src="./assets/img/한송이.jpg" alt="..." />
                         </button>
 
                         <!-- Product name-->
@@ -200,7 +203,7 @@
                     <div class="card-body p-4">
                       <div class="text-name">
                         <button class="menu-button">
-                          <img class="card-img-top" src="0.jpeg" alt="..." />
+                          <img class="card-img-top" src="./assets/img/한송이.jpg" alt="..." />
                         </button>
 
                         <!-- Product name-->
@@ -224,7 +227,7 @@
                     <div class="card-body p-4">
                       <div class="text-name">
                         <button class="menu-button">
-                          <img class="card-img-top" src="0.jpeg" alt="..." />
+                          <img class="card-img-top" src="./assets/img/한송이.jpg" alt="..." />
                         </button>
 
                         <!-- Product name-->
@@ -250,7 +253,7 @@
                     <div class="card-body p-4">
                       <div class="text-name">
                         <button class="menu-button">
-                          <img class="card-img-top" src="0.jpeg" alt="..." />
+                          <img class="card-img-top" src="./assets/img/한송이.jpg" alt="..." />
                         </button>
 
                         <!-- Product name-->
@@ -274,7 +277,7 @@
                     <div class="card-body p-4">
                       <div class="text-name">
                         <button class="menu-button">
-                          <img class="card-img-top" src="0.jpeg" alt="..." />
+                          <img class="card-img-top" src="./assets/img/한송이.jpg" alt="..." />
                         </button>
 
                         <p class="fw-bolder"></p>
@@ -295,38 +298,52 @@
         </div>
       </div>
     </div>
-    <footer class="py-5 bg-light">
-      <form class="d-flex justify-content-end">
-        <!-- 주문하기 버튼 -->
-        <button class="btn btn-outline-dark" id="orderButton" type="submit">주문하기</button>
-
-        <button class="btn btn-outline-dark" type="submit">장바구니</button>
-      </form>
+    <footer class="bg-light flex-start-footer">
+        <form class="d-flex justify-content-end">
+            <!-- 주문하기 버튼 -->
+            <button class="btn btn-outline-dark" id="orderButton" type="submit">주문내역</button>
+            <!-- 장바구니 버튼 -->
+            <button class="btn btn-outline-dark" id="basketButton" type="button">장바구니</button>
+        </form>
     </footer>
+
+   
 
     <!-- menuModal -->
     <div id="menuModal" class="modal">
       <div id="modalContent" class="modal-content">
         <span id="close-Button" class="close-button">X</span>
-        <button id="addButton">추가</button>
+        <button id="menuaddButton">추가</button>
         <div class="modal-description"></div>
       </div>
     </div>
 
-<!-- orderModal -->
-<div id="orderModal" class="modal-1">
-    <div id="orderModalContent" class="modal-1-content">
-        <span id="closeOrderButton" class="close-button">X</span>
-        <button id="addOrderButton">주문하기</button>
-        <div class="modal-1-description"></div>
+    <!-- orderModal -->
+    <div id="orderModal" class="modal-order">
+        <div id="orderModalContent" class="modal-order-content">
+            <span id="closeOrderButton" class="close-button">X</span>
+            <button id="addOrderButton">완료</button>
+            <div class="modal-1-description"></div>
+        </div>
     </div>
-</div>
 
+    <!-- basketModal -->
+    <div id="basketModal" class="modal-basket">
+        <div id="basketModalContent" class="modal-basket-content">
+          <input type="number">
+            <span id="closeBasketButton" class="close-button">X</span>
+            <button id="addOrderButton">주문하기</button>
+            <div class="basket-description"></div>
+        </div>
+    </div>
 
     
-    <script src="js/Main.js"></script>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/orderModal.js"></script>
+    
+  
+    
+    
   </body>
+  
 </html>

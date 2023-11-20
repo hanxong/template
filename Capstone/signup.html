@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>1921 회원가입 페이지</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/Main.css" rel="stylesheet" />
+    <link href="css/signup.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="userList"></div>
+    <div class="d-flex" id="wrapper">
+      <!-- Sidebar-->
+      <div class="border-end bg-white" id="sidebar-wrapper">
+        <div class="sidebar-heading border-bottom bg-light">1921</div>
+        <div class="list-group list-group-flush">
+          <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            href="#!"
+            >베스트 메뉴</a
+          >
+          <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            href="#!"
+            >메인 메뉴</a
+          >
+          <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            href="#!"
+            >특선 메뉴</a
+          >
+          <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            href="#!"
+            >사이드 메뉴</a
+          >
+          <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            href="#!"
+            >음료</a
+          >
+          <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            href="#!"
+            >주류</a
+          >
+          <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            href="#!"
+            >직원호출</a
+          >
+        </div>
+      </div>
+      <!-- Page content wrapper-->
+      <div id="page-content-wrapper">
+        <!-- Top navigation-->
+        <nav
+          class="navbar navbar-expand-lg navbar-light bg-light border-bottom"
+        >
+          <div class="container-fluid">
+            <button class="btn btn-primary" id="sidebarToggle">Menu</button>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdown"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    >☺︎</a
+                  >
+                  <div
+                    class="dropdown-menu dropdown-menu-end"
+                    aria-labelledby="navbarDropdown"
+                  >
+                    <a class="dropdown-item" href="signup.html"> 번호 입력</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <!-- Page content-->
+        <div class="container-fluid">
+          <section>
+            <div class="container px-4 px-lg-5 mt-5 text-align">
+              <h1 style="color: #75abd2">가입하기</h1>
+              <h3>해당 번호로 쿠폰 및 이벤트 정보를 보내드립니다.</h3>
+              <br />
+              <div class="inputbox">
+                <input
+                  type="text"
+                  class="keypad"
+                  id="numInput"
+                  disabled="disabled"
+                  placeholder="010-0000-0000"
+                />
+              </div>
+              <br />
+              <div id="keypad"></div>
+              <br />
+              <p>
+                본인은 만 18세 이상이며
+                <span class="stress">
+                  이용약관, 개인 정보 수집 및 이용 개인 정보 제공 내용을 확인
+                </span>
+                하였으며 동의합니다.
+              </p>
+              <br />
+              <button class="btn btn-signup">동의하고 정보받기 가입하기</button>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="menuModal" class="modal">
+      <div id="modalContent" class="modal-content">
+        <span id="close-Button" class="close-button">X</span>
+        <button id="addButton">추가</button>
+        <div class="modal-description"></div>
+      </div>
+    </div>
+
+    <script src="js/Main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="jquery.keypad.js"></script>
+    <script src="js/signup.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#keypad").keypad();
+      });
+    </script>
+  </body>
+</html>

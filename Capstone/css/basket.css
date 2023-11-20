@@ -1,0 +1,93 @@
+.modal-basket {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 20%; /* 모달의 폭 조절 */
+  background-color: #fff;
+  z-index: 999;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* .modal-basket.active {
+  right: 0;
+} */
+
+.modal-basket-content {
+  max-height: 100vh; /* 최대 화면 높이까지만 확장 */
+  overflow-y: auto; /* 넘치면 스크롤 허용 */
+}
+
+/* 하단 여백 없애기 주문하기,장바구니 버튼*/
+
+.flex-end-footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin: 0;
+}
+
+.basket-title {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.basket-box {
+  display: grid;
+  grid-template-columns: 100%;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.detail-box {
+  display: grid;
+  row-gap: 0.5rem;
+}
+
+.basket-img {
+  width: 8rem;
+  height: 8rem;
+  object-fit: contain;
+  padding: 1rem;
+}
+
+.basket-menu-name {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.basket-menu-price {
+  font-weight: 500;
+}
+
+.basket-quantity {
+  outline-color: black;
+  width: 2.4rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.basket-remove {
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+/* 합계 금액 */
+.total {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+  border-top: 1px solid black;
+}
+
+.total-title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.total-price {
+  margin-left: 0.5rem;
+}
